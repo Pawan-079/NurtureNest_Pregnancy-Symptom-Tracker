@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Symptom Tracker</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Container styling */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input labels */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Input fields styling */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        /* Submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Submit button hover effect */
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+
+        /* Output area */
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pregnancy Symptom Tracker</h1>
+    <form method="post">
+        <label for="date">Date:</label>
+        <input type="date" name="Date" id="date" required>
+
+        <label for="trimester">Trimester:</label>
+        <select name="Trimester" id="trimester" required>
+            <option value="First">First Trimester</option>
+            <option value="Second">Second Trimester</option>
+            <option value="Third">Third Trimester</option>
+        </select>
+        
+        <label for="symptom">Symptom:</label>
+        <select name="Symptom" id="symptom" required>
+            <option value="Nausea">Nausea</option>
+            <option value="Breast Tenderness">Breast Tenderness</option>
+            <option value="Shortness of Breath">Shortness of Breath</option>
+            <option value="Fatigue">Fatigue</option>
+            <option value="Abdominal Pain">Abdominal Pain</option>
+        </select>
+        
+
+        <label for="severity">Severity:</label>
+<select name="Severity" id="severity" required>
+    <option value="Mild">Mild</option>
+    <option value="Moderate">Moderate</option>
+    <option value="Severe">Severe</option>
+</select>
+
+
+<label for="duration">Duration:</label>
+<select name="Duration" id="duration" required>
+    <option value="2 hours">2 hours</option>
+    <option value="1 hour">1 hour</option>
+    <option value="Full day">Full day</option>
+    <option value="Multiple days">Multiple days</option>
+</select>
+
+
+<label for="frequency">Frequency:</label>
+<select name="Frequency" id="frequency" required>
+    <option value="Daily">Daily</option>
+    <option value="Weekly">Weekly</option>
+    <option value="Occasional">Occasional</option>
+</select>
+
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Placeholder for output -->
+    <div class="output">
+        <h3>Recommended Action:</h3>
+        <p>{{ recommended_action }}</p>
+
+        <h3>Medical Advice:</h3>
+        <p>{{ medical_advice }}</p>
+
+        <h3>Follow-Up:</h3>
+        <p>{{ follow_up }}</p>
+    </div>
+</body>
+</html>

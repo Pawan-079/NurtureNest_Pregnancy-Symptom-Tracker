@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NurtureNest - Pregnancy Symptom Tracker</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header>
+        <h1>NurtureNest</h1>
+        <p>Track your symptoms and take care of yourself and your baby.</p>
+    </header>
+    
+    <section id="symptom-tracker">
+        <form id="symptom-form">
+            <h2>Daily Symptom Tracker</h2>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="symptom">Describe your symptoms:</label>
+            <textarea id="symptom" name="symptom" required></textarea>
+            
+            <button type="submit">Track</button>
+        </form>
+    </section>
+
+    <section id="baby-progress">
+        <h2>Baby Development Insights</h2>
+        <div id="baby-updates"></div>
+    </section>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
